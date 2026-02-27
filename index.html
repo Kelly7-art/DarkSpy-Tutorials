@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DarkSpy Tutorials</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#000;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+/* ===== Animated Background ===== */
+.bg{
+    position:fixed;
+    width:100%;
+    height:100%;
+    z-index:-1;
+    background:radial-gradient(circle at 40% 40%, 
+        rgba(0,255,150,0.15) 0%, 
+        rgba(0,0,0,1) 60%);
+}
+
+.bg::before{
+    content:"";
+    position:absolute;
+    width:200%;
+    height:200%;
+    background-image:
+        radial-gradient(rgba(0,255,150,0.8) 1px, transparent 1px);
+    background-size:3px 3px;
+    animation:moveParticles 30s linear infinite;
+    opacity:0.25;
+}
+
+@keyframes moveParticles{
+    0%{transform:translate(0,0);}
+    100%{transform:translate(-200px,-200px);}
+}
+
+/* ===== Header ===== */
+header{
+    padding:20px;
+    text-align:center;
+    border-bottom:1px solid rgba(0,255,150,0.3);
+}
+
+header h1{
+    color:#00ff99;
+}
+
+/* ===== Container ===== */
+.container{
+    max-width:800px;
+    margin:auto;
+    padding:15px;
+}
+
+/* ===== Tutorial Card (YouTube Style) ===== */
+.tutorial-card{
+    display:block;
+    text-decoration:none;
+    color:#fff;
+    margin-bottom:25px;
+    border:1px solid rgba(0,255,150,0.25);
+    border-radius:10px;
+    overflow:hidden;
+    background:rgba(0,0,0,0.7);
+    transition:0.3s;
+}
+
+.tutorial-card:hover{
+    border-color:#00ff99;
+    box-shadow:0 0 15px #00ff99;
+}
+
+/* Thumbnail */
+.thumbnail{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    display:block;
+}
+
+/* Text Area */
+.tutorial-info{
+    padding:15px;
+}
+
+.tutorial-info h2{
+    font-size:18px;
+    color:#00ff99;
+    margin-bottom:8px;
+}
+
+.tutorial-info p{
+    font-size:14px;
+    color:#ccc;
+    line-height:1.4;
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    padding:20px;
+    border-top:1px solid rgba(0,255,150,0.3);
+    color:#aaa;
+    margin-top:30px;
+    font-size:14px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="bg"></div>
+
+<header>
+    <h1>DarkSpy Tutorials</h1>
+</header>
+
+<div class="container">
+
+    <!-- Tutorial 1 -->
+    <a href="tutorial1.html" class="tutorial-card">
+        <img src="https://via.placeholder.com/800x450" class="thumbnail" alt="Thumbnail">
+        <div class="tutorial-info">
+            <h2>Facebook Hacking</h2>
+            <p>Know How Some Hackers Hack Facebook accounts using a simple Phishing Tool on Android</p>
+        </div>
+    </a>
+
+    <!-- Tutorial 2 -->
+    <a href="tutorial2.html" class="tutorial-card">
+        <img src="https://via.placeholder.com/800x450" class="thumbnail" alt="Thumbnail">
+        <div class="tutorial-info">
+            <h2>WiFi Hacking</h2>
+            <p>Practical Tutorial on how WiFi networks can be hacked by using a free BruteForce Tool</p>
+        </div>
+    </a>
+
+    <!-- Tutorial 3 -->
+    <a href="tutorial3.html" class="tutorial-card">
+        <img src="https://via.placeholder.com/800x450" class="thumbnail" alt="Thumbnail">
+        <div class="tutorial-info">
+            <h2>TikTok Hack</h2>
+            <p>How TikTok Accounts get Hacked with Just an APK</p>
+        </div>
+    </a>
+
+</div>
+
+<footer>
+    © 2026 DarkSpy Tutorials | All Rights Reserved
+</footer>
+
+</body>
+</html>
